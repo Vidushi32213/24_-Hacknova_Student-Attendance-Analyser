@@ -1,0 +1,30 @@
+Student Attendance Analyzer
+
+Team hackanova
+
+Team Members: Sheavy & Vidushi
+
+About the Project
+
+A simple C program that calculates student attendance percentages and identifies students with attendance below 75%.
+
+Features
+
+* Takes attendance input for 10 students.
+* Calculates attendance percentage.
+* Displays a student-wise attendance report.
+* Identifies students below 75% attendance.
+
+Technologies Used
+
+* C Programming
+* VS Code
+* GCC Compiler
+
+Formula
+
+Attendance % = (Classes Attended / Total Classes) × 100
+
+Developed By
+
+Sheavy & Vidushi | Team hackanova
