@@ -1,0 +1,83 @@
+#include<stdio.h>
+#define STUDENTS 10
+#define CLASSES 5
+
+int main()
+{
+    int attendance[STUDENTS][CLASSES];
+    int i, j;
+
+    printf("STUDENT ATTENDANCE RECORD\n");
+    printf("Enter 1 for Present and 0 for Absent\n\n");
+
+    //Taking attendance
+    for(i = 0; i < STUDENTS; i++)
+    {
+        printf("Student %d:\n", i + 1);
+
+        for(j = 0; j < CLASSES; j++)
+        {
+            printf("Class %d:", j + 1);
+            scanf("%d", &attendance[i][j]);
+    
+        }
+
+        printf("\n");
+
+    }
+    //Display attendance
+    printf("\nATTENDANCE REPORT\n");
+
+    printf("Student\t");
+    for(j = 0; j < CLASSES; j++)
+    {
+        printf("C%d\t", j + 1);
+    }
+    printf("\n");
+    for(i = 0; i < STUDENTS; i++)
+    {
+        printf("%d\t", i + 1);
+
+        for(j = 0; j < CLASSES; j++)
+        {
+            if(attendance[i][j] == 1)
+            printf("P\t");
+            else
+            printf("A\t");
+        }
+        printf("\n");
+
+    }
+    return 0;
+}
+#include<stdio.h>
+#define Students 10
+#define TOTAL_CLASSES 20
+#define Threshold 75
+int main() {
+    int present[Students];
+    float percentage[Students];
+    int i;
+    printf("ATTENDANCE ANALYZER\n");
+    printf("Total Classes =%d\n",TOTAL_CLASSES);
+    for(i=0;i<Students;i++) {
+        printf("Enter the number of classes attended by student %d: ",i+1);
+        scanf("%d",&present[i]); }
+        printf("\nStudent-Wise ATTENDANCE REPORT\n");
+        for(i=0; i<Students;i++)
+        {
+            percentage[i] =
+            ((float)present[i] / TOTAL_CLASSES) * 100;
+            printf("Student %d: %.2f%%\n",
+                i + 1, percentage[i]);}
+                printf("\nSTUDENTS Below 75%% ATTENDANCE\n");
+    
+            for(i=0; i<Students; i++)
+            {
+                if(percentage[i] < Threshold)
+                {
+                    printf("Student %d : %.2f%%\n",
+                        i + 1, percentage[i]);
+                }
+        }
+        return 0; }
